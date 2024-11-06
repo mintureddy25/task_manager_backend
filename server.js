@@ -11,15 +11,15 @@ const moment = require("moment");
 require("moment-timezone");
 moment.tz.setDefault("Africa/Lagos");
 
-const customerLoginRouter = require("./auth/customers/login");
+
+const loginRouter = require('./auth/login');
+const signupRouter = require('./auth/signup');
 
 
 
 
-
-
-app.use("/customer", customerLoginRouter);
-
+app.use(loginRouter);
+app.use(signupRouter);
 
 
 
